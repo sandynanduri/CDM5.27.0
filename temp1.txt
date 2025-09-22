@@ -1,0 +1,72 @@
+Based on the DRR field naming patterns and MAS data elements, here are the recommended **Golden Key names** for both legs:
+
+## **Golden Key Names for Frequency Fields**
+
+### **🔢 `quantitySchedule.frequency.periodMultiplier`**
+
+#### **Fixed Rate:**
+- **Leg 1**: `fixedRatePaymentFrequencyPeriodMultiplierLeg1`
+- **Leg 2**: `fixedRatePaymentFrequencyPeriodMultiplierLeg2`
+
+#### **Floating Rate:**
+- **Leg 1**: `floatingRatePaymentFrequencyPeriodMultiplierLeg1`
+- **Leg 2**: `floatingRatePaymentFrequencyPeriodMultiplierLeg2`
+
+### **📊 `quantitySchedule.frequency.period`**
+
+#### **Fixed Rate:**
+- **Leg 1**: `fixedRatePaymentFrequencyPeriodLeg1`
+- **Leg 2**: `fixedRatePaymentFrequencyPeriodLeg2`
+
+#### **Floating Rate:**
+- **Leg 1**: `floatingRatePaymentFrequencyPeriodLeg1`
+- **Leg 2**: `floatingRatePaymentFrequencyPeriodLeg2`
+
+## **Complete Golden Key Mapping Table:**
+
+| **CDM Field** | **Rate Type** | **Leg** | **Golden Key Name** | **MAS Data Element** | **Example Value** |
+|---------------|---------------|---------|---------------------|---------------------|-------------------|
+| `frequency.periodMultiplier` | Fixed | 1 | `fixedRatePaymentFrequencyPeriodMultiplierLeg1` | **120** | `3` |
+| `frequency.period` | Fixed | 1 | `fixedRatePaymentFrequencyPeriodLeg1` | **119** | `"MONTH"` |
+| `frequency.periodMultiplier` | Floating | 1 | `floatingRatePaymentFrequencyPeriodMultiplierLeg1` | **124** | `6` |
+| `frequency.period` | Floating | 1 | `floatingRatePaymentFrequencyPeriodLeg1` | **123** | `"MONTH"` |
+| `frequency.periodMultiplier` | Fixed | 2 | `fixedRatePaymentFrequencyPeriodMultiplierLeg2` | **122** | `3` |
+| `frequency.period` | Fixed | 2 | `fixedRatePaymentFrequencyPeriodLeg2` | **121** | `"MONTH"` |
+| `frequency.periodMultiplier` | Floating | 2 | `floatingRatePaymentFrequencyPeriodMultiplierLeg2` | **126** | `6` |
+| `frequency.period` | Floating | 2 | `floatingRatePaymentFrequencyPeriodLeg2` | **125** | `"MONTH"` |
+
+## **Alternative Shorter Names (if needed):**
+
+If you prefer shorter Golden Key names:
+
+| **Rate Type** | **Leg** | **Field** | **Short Golden Key** |
+|---------------|---------|-----------|---------------------|
+| Fixed | 1 | periodMultiplier | `fixedFreqMultiplierLeg1` |
+| Fixed | 1 | period | `fixedFreqPeriodLeg1` |
+| Floating | 1 | periodMultiplier | `floatingFreqMultiplierLeg1` |
+| Floating | 1 | period | `floatingFreqPeriodLeg1` |
+| Fixed | 2 | periodMultiplier | `fixedFreqMultiplierLeg2` |
+| Fixed | 2 | period | `fixedFreqPeriodLeg2` |
+| Floating | 2 | periodMultiplier | `floatingFreqMultiplierLeg2` |
+| Floating | 2 | period | `floatingFreqPeriodLeg2` |
+
+## **Example Golden Schema JSON:**
+
+```json
+{
+  "fixedRatePaymentFrequencyPeriodMultiplierLeg1": 3,
+  "fixedRatePaymentFrequencyPeriodLeg1": "MONTH",
+  "floatingRatePaymentFrequencyPeriodMultiplierLeg1": 6,
+  "floatingRatePaymentFrequencyPeriodLeg1": "MONTH",
+  "fixedRatePaymentFrequencyPeriodMultiplierLeg2": 6,
+  "fixedRatePaymentFrequencyPeriodLeg2": "MONTH",
+  "floatingRatePaymentFrequencyPeriodMultiplierLeg2": 3,
+  "floatingRatePaymentFrequencyPeriodLeg2": "MONTH"
+}
+```
+
+This naming convention:
+1. **Matches DRR field names** exactly with leg suffix
+2. **Maps directly to MAS data elements** 119-126
+3. **Clearly distinguishes** between fixed/floating and leg1/leg2
+4. **Follows consistent naming pattern** used elsewhere in the system
