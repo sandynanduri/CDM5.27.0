@@ -1,0 +1,8 @@
+{
+  "effectiveDate": "2024-01-15",
+  "effectiveDateBusinessDayConvention": "FOLLOWING",
+  "effectiveDateBusinessCenter": "SGSI",
+  "terminationDate": "2024-12-15",
+  "terminationDateBusinessDayConvention": "FOLLOWING",
+  "terminationDateBusinessCenter": "SGSI"
+}
