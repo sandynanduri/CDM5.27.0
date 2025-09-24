@@ -1,0 +1,79 @@
+priceSchedule  ← ROOT LEVEL (no suffix)
+  valueLeg1
+  valueLeg2
+  unit  ← ROOT LEVEL (no suffix)
+    capacityUnitLeg1
+    capacityUnitLeg2
+    weatherUnitLeg1
+    weatherUnitLeg2
+    financialUnitLeg1
+    financialUnitLeg2
+    currencyLeg1
+    currencyLeg2
+  datedValue  ← ROOT LEVEL (no suffix)
+    dateLeg1
+    dateLeg2
+    valueLeg1
+    valueLeg2
+  perUnitOf  ← ROOT LEVEL (no suffix)
+    capacityUnitLeg1
+    capacityUnitLeg2
+    weatherUnitLeg1
+    weatherUnitLeg2
+    financialUnitLeg1
+    financialUnitLeg2
+    currencyLeg1
+    currencyLeg2
+  priceTypeLeg1
+  priceTypeLeg2
+  priceExpressionLeg1
+  priceExpressionLeg2
+  composite  ← ROOT LEVEL (no suffix)
+    baseValueLeg1
+    baseValueLeg2
+    operandLeg1
+    operandLeg2
+    arithmeticOperatorLeg1
+    arithmeticOperatorLeg2
+    operandTypeLeg1
+    operandTypeLeg2
+  arithmeticOperatorLeg1
+  arithmeticOperatorLeg2
+  cashPrice  ← ROOT LEVEL (no suffix)
+    cashPriceTypeLeg1
+    cashPriceTypeLeg2
+    premiumExpression  ← ROOT LEVEL (no suffix)
+      premiumTypeLeg1
+      premiumTypeLeg2
+      pricePerOption  ← ROOT LEVEL (no suffix)
+        valueLeg1
+        valueLeg2
+        unit  ← ROOT LEVEL (no suffix)
+          currencyLeg1
+          currencyLeg2
+        datedValue  ← ROOT LEVEL (no suffix)
+          dateLeg1
+          dateLeg2
+          valueLeg1
+          valueLeg2
+        multiplier  ← ROOT LEVEL (no suffix)
+          valueLeg1
+          valueLeg2
+          unit  ← ROOT LEVEL (no suffix)
+            capacityUnitLeg1
+            capacityUnitLeg2
+            weatherUnitLeg1
+            weatherUnitLeg2
+            financialUnitLeg1
+            financialUnitLeg2
+            currencyLeg1
+            currencyLeg2
+        frequency  ← ROOT LEVEL (no suffix)
+          periodMultiplierLeg1
+          periodMultiplierLeg2
+          periodLeg1
+          periodLeg2
+      percentageOfNotionalLeg1
+      percentageOfNotionalLeg2
+    feeTypeLeg1
+    feeTypeLeg2
